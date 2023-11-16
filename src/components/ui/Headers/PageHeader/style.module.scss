@@ -1,0 +1,12 @@
+@import "@breakpoint";
+
+.page-title {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+
+  @include breakpoint($b-laptop) {
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+}

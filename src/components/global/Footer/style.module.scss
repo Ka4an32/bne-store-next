@@ -1,0 +1,35 @@
+@import "@breakpoint";
+
+.footer {
+  background-color: var(--gray_dark);
+  background-repeat: no-repeat;
+  background-position: -70px 80%;
+  background-size: 400px;
+  background-image: url(../../../assets/images/backgrounds/background-moto.png);
+
+  padding: 20px 10px;
+
+  @include breakpoint($b-tablet) {
+    background-position: 95% 60%;
+    background-size: 45%;
+  }
+
+  &__head {
+    margin: 10px 0;
+    @include breakpoint($b-tablet) {
+      margin: 0 auto;
+    }
+  }
+
+  &__name {
+    font-size: 1.68rem;
+    color: var(--yellow);
+    font-weight: 500;
+
+    margin-bottom: 11px;
+
+    @include breakpoint($b-tablet) {
+      margin-bottom: 20px;
+    }
+  }
+}

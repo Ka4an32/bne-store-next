@@ -1,0 +1,14 @@
+@import "@breakpoint";
+
+.icon {
+  --size: 75px;
+  width: var(--size);
+  height: var(--size);
+
+  @include breakpoint($b-tabletS) {
+    --size: 110px;
+  }
+  @include breakpoint($b-desktop) {
+    --size: 160px;
+  }
+}

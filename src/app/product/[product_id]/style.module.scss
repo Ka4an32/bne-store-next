@@ -1,0 +1,32 @@
+@import "@breakpoint";
+
+.product-section {
+  display: grid;
+  width: 100%;
+
+  grid-template-areas:
+    'b'
+    'a'
+    'c';
+
+  @include breakpoint($b-tablet) {
+    grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr);
+    column-gap: 20px;
+    grid-template-areas: 'a b'
+      'a c';
+  }
+
+  &__slider-column {
+    width: 100%;
+    max-width: 94vw;
+    grid-area: a;
+  }
+
+  &__buy-block {
+    grid-area: b;
+  }
+
+  &__info-block {
+    grid-area: c;
+  }
+}

@@ -1,0 +1,13 @@
+@import "@breakpoint";
+
+.page-container {
+  margin: 40px auto 140px;
+
+  @include breakpoint($b-laptop) {
+    margin: 50px auto 150px;
+  }
+
+  @include breakpoint($b-desktop) {
+    margin: 70px auto 160px;
+  }
+}

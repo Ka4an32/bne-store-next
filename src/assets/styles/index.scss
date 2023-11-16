@@ -1,0 +1,7 @@
+@import "./typography/typography";
+@import "./color/color";
+@import "@/styles/_mixins/_breakpoint.scss";
+
+:root {
+  --index-relative-size: 16px;
+}

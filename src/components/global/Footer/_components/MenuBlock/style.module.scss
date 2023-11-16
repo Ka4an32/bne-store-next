@@ -1,0 +1,62 @@
+@import "@breakpoint";
+
+.menu-container {
+  margin: 0;
+  display: grid;
+  margin-bottom: 60px;
+
+  row-gap: 40px;
+  grid-template-areas:
+    "inf"
+    "feedback"
+    "menu";
+
+  @include breakpoint($b-tablet) {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    grid-template-areas: "inf inf menu feedback";
+  }
+
+  @include breakpoint($b-desktop) {
+    margin-bottom: 60px;
+  }
+
+  .information {
+    grid-area: inf;
+    color: white;
+
+    &__description {
+      margin-bottom: 40px;
+      font-size: 1.18rem;
+
+      @include breakpoint($b-tablet) {
+        max-width: 40%;
+      }
+    }
+
+    &__tel {
+      margin-bottom: 20px;
+      @include breakpoint($b-tablet) {
+        margin-bottom: 40px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+      }
+    }
+
+    &__working-hours {
+      line-height: 1.5;
+    }
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .feedback {
+    grid-area: feedback;
+  }
+}

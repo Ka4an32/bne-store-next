@@ -1,0 +1,35 @@
+@import "@breakpoint";
+
+.menu-link {
+  font-size: 1.7rem;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 4px 0px;
+  transition: color 0.1s;
+
+  @include breakpoint($b-laptop) {
+    font-size: 1.5rem;
+  }
+
+  &::after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--yellow);
+
+    transition: width 0.3s;
+  }
+
+  &:hover,
+  &.active {
+    color: var(--yellow);
+    &::after {
+      width: 100%;
+    }
+  }
+}

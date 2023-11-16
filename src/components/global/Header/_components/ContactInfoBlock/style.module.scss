@@ -1,0 +1,41 @@
+@import "@breakpoint";
+
+.contact-info {
+  display: none;
+  background-color: var(--yellow);
+  position: relative;
+  z-index: 10;
+
+  @include breakpoint($b-tablet) {
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 6px 0;
+
+    @include breakpoint($b-desktop) {
+      padding: 10px 30px;
+    }
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tel {
+    font-size: 1.25rem;
+    margin-left: 10px;
+    color: var(--black);
+    text-decoration: underline;
+  }
+}

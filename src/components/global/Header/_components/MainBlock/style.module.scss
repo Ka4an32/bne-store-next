@@ -1,0 +1,54 @@
+@import "@breakpoint";
+
+.main-header-block {
+  position: relative;
+  z-index: 9;
+  background-color: var(--gray_dark);
+
+  @include breakpoint($b-laptop) {
+    padding: 10px 0 15px;
+    background-image: url(../../../../../assets/images/backgrounds/background-moto.png);
+    background-repeat: no-repeat;
+    background-position: 80% 15%;
+    background-size: 22%;
+  }
+
+  @include breakpoint($b-desktop) {
+    padding: 20px 0 25px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray_dark);
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    @include breakpoint($b-laptop) {
+      background-color: transparent;
+      padding: 0px;
+    }
+
+    @include breakpoint($b-desktop) {
+      padding: 0 30px;
+    }
+  }
+}
+
+.desktop-menu {
+  display: flex;
+  flex-grow: 1;
+
+  &__menu-container {
+    margin-left: 40px;
+    width: 460px;
+  }
+
+  &__link-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+}

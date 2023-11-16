@@ -1,0 +1,24 @@
+.tag-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+  padding: 5px 7px;
+  font-size: 14px;
+  background-color: white;
+
+  border: 1px solid #dfdfdf;
+  border-radius: 6px;
+  color: #b7b5b5;
+
+  transition: background-color .3s, color .3s;
+
+  &:hover,
+  &:focus {
+    background-color: #dfdfdf;
+    color: #5c5c5c;
+  }
+
+  &:active {
+    background-color: #d2d2d2;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../_mixins/breakpoint";
+
+$primary-font: "Gilroy", sans-serif;
+
+:root {
+  font-size: 12px;
+
+  @include breakpoint($b-desktop) {
+    font-size: 16px;
+  }
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}

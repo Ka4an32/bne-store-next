@@ -1,0 +1,25 @@
+@import "@breakpoint";
+
+.menu {
+  list-style-type: none;
+  columns: 2;
+
+  @include breakpoint($b-tablet) {
+    columns: 1;
+  }
+
+  &__link {
+    display: block;
+    padding: 7.5px 0;
+    color: white;
+    text-decoration: none;
+
+    @include breakpoint($b-laptop) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint($b-desktop) {
+      font-size: 1.25rem;
+    }
+  }
+}

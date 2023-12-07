@@ -8,6 +8,7 @@ import s from './style.module.scss'
 import CategoryListNode from "@/src/components/nodes/CategoryListNode";
 import { useParams } from "next/navigation";
 
+
 const CatalogLayout = ({
   children
 }) => {

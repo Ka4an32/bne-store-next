@@ -12,6 +12,7 @@
   @include breakpoint($b-tablet) {
     grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr);
     column-gap: 20px;
+    grid-template-rows: min-content 1fr;
     grid-template-areas: 'a b'
       'a c';
   }
@@ -28,5 +29,31 @@
 
   &__info-block {
     grid-area: c;
+  }
+}
+
+.description-block {
+  &__header {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  margin-bottom: 15px;
+}
+
+.for-model-block {
+  &__header {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 3px 8px 3px 0px;
+    }
   }
 }

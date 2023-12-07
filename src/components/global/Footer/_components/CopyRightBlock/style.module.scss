@@ -11,6 +11,8 @@
 
   @include breakpoint($b-tablet) {
     flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
   }
 
   @include breakpoint($b-desktop) {

@@ -37,8 +37,12 @@
 }
 
 .desktop-menu {
-  display: flex;
+  display: none;
   flex-grow: 1;
+
+  @include breakpoint($b-tabletS) {
+    display: flex;
+  }
 
   &__menu-container {
     margin-left: 40px;

@@ -1,0 +1,14 @@
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    version: 18
+build:
+  artifacts:
+    "*": /
+  command: npm install --force
+  additionalCommands: npm run build
+run:
+  command: npm run start
+  persistenceMount: /data
+  containerPort: 80

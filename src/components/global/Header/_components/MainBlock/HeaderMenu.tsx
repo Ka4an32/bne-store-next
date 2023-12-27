@@ -17,7 +17,7 @@ const HeaderMenu = () => {
   return (
     <nav className={s["desktop-menu"]}>
       <div className={s["desktop-menu__menu-container"]}>
-        <MenuList className={s["desktop-menu__link-list"]} />
+        <MenuList setOpenStatus={() => { }} className={s["desktop-menu__link-list"]} />
         <SearchField />
       </div>
     </nav>

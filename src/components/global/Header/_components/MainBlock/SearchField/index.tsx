@@ -7,6 +7,7 @@ const SearchField: React.FC<{
 }> = ({ className }) => (
   <div className={clsx(s["search-input-container"], className)}>
     <input
+      disabled
       placeholder="Наименование, артикул или бренд"
       className={clsx(s["search-field"])}
       type="search"

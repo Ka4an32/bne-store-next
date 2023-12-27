@@ -1,7 +1,13 @@
 export const data = {
   name: "BNE CORPORATION",
   contact: {
-    tel: "88003336653",
+    tel: "89206011881",
+    adress: {
+      city: 'г. Брянск',
+      street: 'ул. 8 Марта, 46',
+      postIndex: '241902',
+    },
+    email: 'nikita32CR@yandex.ru'
   },
   copyRight: {
     text: "2023 © BNE CORPORATION",

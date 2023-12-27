@@ -32,7 +32,6 @@ const MenuBlock = () => {
         <MenuComponent />
       </div>
       <div className={s.feedback}>
-        <Button>Обратная связь</Button>
       </div>
     </MainContainer>
   );

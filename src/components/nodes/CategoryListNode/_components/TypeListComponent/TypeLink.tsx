@@ -8,8 +8,6 @@ const TypeLink: React.FC<typeof Link.defaultProps & { name: string }> = ({ name,
   const pathname = usePathname();
   const isActive = pathname === href;
 
-  console.log(isActive);
-
   return (
     <Link className={clsx(s['type-link'], isActive && s['type-link__active'])} href={href} {...props}>
       {name}

@@ -18,16 +18,16 @@ const CatalogLayout = ({
 
   return (
     <PageContainer>
-      <MainContainer el="div">
+      <MainContainer el="section">
         <PageHeader text="Каталог" />
-        <section className={s["catalog-container"]}>
+        <div className={s["catalog-container"]}>
           <div className={s["category-product-list"]}>
             <CategoryListNode category={category} />
           </div>
           <div className={s["catalog-product-list"]}>
             {children}
           </div>
-        </section>
+        </div>
       </MainContainer>
     </PageContainer>
   );

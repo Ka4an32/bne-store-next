@@ -1,5 +1,6 @@
-const PromotionsPage = () => {
-  return <div>promotions</div>;
-};
+import { redirect } from 'next/navigation'
 
-export default PromotionsPage;
+export default function Home() {
+  redirect('/feature')
+}
+

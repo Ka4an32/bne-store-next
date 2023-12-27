@@ -9,9 +9,9 @@ interface TagButtonInterface extends BaseButtonInterface {
 }
 
 
-const TagButton: React.FC<PropsWithChildren<TagButtonInterface>> = ({ children, className }) => {
+const TagButton: React.FC<PropsWithChildren<TagButtonInterface>> = ({ children, className, ...props }) => {
   return (
-    <Button className={clsx(s['tag-btn'], className)}>
+    <Button className={clsx(s['tag-btn'], className)} {...props}>
       {children}
     </Button>
   )

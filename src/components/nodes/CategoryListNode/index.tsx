@@ -29,16 +29,13 @@ const CategoryListNode: React.FC<{ category?: string }> = ({ category }) => {
       name: data.categories[1].name,
       slug: data.categories[1].slug,
       content: `
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis unde veritatis omnis ipsam, nulla mollitia sint est explicabo facilis vero adipisci molestias nostrum nobis obcaecati, expedita deleniti, quam praesentium exercitationem.
+        Подставки для мототехники
       `,
     },
   ];
 
 
   const activeCategory = category && categoriesItems.findIndex(({ slug }) => slug === category)
-
-  console.log(category, activeCategory);
-
 
   return (
     <CategoryAccordion

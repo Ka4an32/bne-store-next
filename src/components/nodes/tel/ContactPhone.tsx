@@ -15,7 +15,7 @@ const ContactPhone: React.FC<{
   return (
     <div className={containerClassName}>
       {!withoutText && "Интернет магазин:"}{" "}
-      <a className={telClassName} href={`tel:+7${data.contact.tel.slice(1)}`}>
+      <a itemProp="telephone" className={telClassName} href={`tel:+7${data.contact.tel.slice(1)}`}>
         {telLabel}
       </a>
     </div>

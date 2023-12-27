@@ -29,25 +29,25 @@ const CatalogPage = ({ params }) => {
   }
 
   return (
-    <>
+    <section itemScope itemType="http://schema.org/Product">
       {/* <Breadcrumbs /> */}
-      <PageHeader text={product.title} />
-      <section className={s["product-section"]}>
+      <PageHeader itemProp="name" text={product.title} />
+      <div className={s["product-section"]}>
         <div className={s['product-section__slider-column']}>
           <ProductSlider images={product.images} />
         </div>
-        <div className={s['product-section__buy-block']}>
+        <section className={s['product-section__buy-block']}>
           <ProductBuyBlock articul={product.article_number} price={product.price} />
-        </div>
+        </section>
         <div className={s['product-section__info-block']}>
           {product.description &&
-            <div className={s['description-block']}>
+            <section className={s['description-block']}>
               <h3 className={s['description-block__header']} >Описание:</h3>
-              <p dangerouslySetInnerHTML={{ __html: product.description }} />
-            </div>
+              <p itemProp="description" dangerouslySetInnerHTML={{ __html: product.description }} />
+            </section>
           }
           {product.forModel && (
-            <div className={s['for-model-block']}>
+            <section className={s['for-model-block']}>
               <h3 className={s['for-model-block__header']}>Модели: </h3>
               <ul className={s['for-model-block__list']}>
                 {product.forModel.map((item) => {
@@ -60,11 +60,11 @@ const CatalogPage = ({ params }) => {
                   )
                 })}
               </ul>
-            </div>
+            </section>
           )}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
 
   );
 };

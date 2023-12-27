@@ -22,7 +22,7 @@ const HeaderMobileMenu: React.FC = () => {
         </div>
       )}
       <nav className={clsx(s["mobile-menu__menu"], open && s.open)}>
-        <MenuList />
+        <MenuList setOpenStatus={setOpenStatus} />
         {isMobile && (
           <div className={s["mobile-menu__contact"]}>
             <SearchField className={s["search-input"]} />
